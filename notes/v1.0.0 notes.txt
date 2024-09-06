@@ -1,0 +1,46 @@
+PCB version: 	v1.0.0
+Code version: 	guitar_waveform_v1.0.0.ino
+MCU: 		ESP32 Huzzah32 Feather Dev Board
+OLED: 		Adafruit 1.44" ST7735
+
+-Though this pedal was designed to fit in a 1590B pedal box, I forgot
+to account for the space that the potentiometers require and thus
+there isn't enough room in the pedal.
+
+-A buck converter was used to regulate the 9V supply to 5V. It may be
+worth it to investigate in using a LDO instead if the project were to
+be redone.
+
+-Using an entire dev board for this pedal wasn't a good idea as it
+consumes a large area of the PCB. Upon some research into small, 
+cheap MCUs that would be compatilbe with my existing code, the ESP32
+C3 could be a chip worth taking a look into. 
+
+-A future version of this project could use SMD components to further
+reduce the footprint of the design.
+
+-The 0.25" audio jacks that were used took up alot of PCB space so 
+using smaller jacks that aren't necessarily meant to be mounted on 
+the PCB could be beneficial.
+
+-Having a dedicated connector for the screen would be nice. There is
+a ribbon cable connector on the back of the ST7735 module that could
+be worth looking into.
+
+-Making the pedal more tolerant to a range of power supplies (say 9V
+to 15V) would be a nice feature. This could make using a LDO for
+supplying power more difficult or not feasable.
+
+-The device (as is) has enough computing capacity to handle
+displaying higher resolution waveforms. The current version is only
+displaying 7 bits of precision (due to low resolution of the ST7735
+of 128x128) out of the 12 bits that the ADC of the ESP32 is reading.
+Not to mention that we collect 512 ADC readings and are only 
+displaying 128 of them. Just 1/4 of the collected readings! A bigger
+screen could justify a bigger box to accomidate it.
+
+-In the next revision, more PCB labels would be nice. For instance, 
+labeling the positive and negative terminals that the power supply 
+will connect to, labels for the different potentiometers like "BIAS"
+and "GAIN", and some more general board info on the back potentially.
+
