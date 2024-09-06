@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.6*%
+%TF.CreationDate,2023-09-01T18:36:08-07:00*%
+%TF.ProjectId,Guitar_waveform_proj,47756974-6172-45f7-9761-7665666f726d,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.6) date 2023-09-01 18:36:08*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.200000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X137160000Y-78740000D02*
+X162560000Y-78740000D01*
+X162560000Y-99060000D01*
+X137160000Y-99060000D01*
+X137160000Y-78740000D01*
+M02*
