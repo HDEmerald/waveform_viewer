@@ -3,9 +3,11 @@ Code version: 	guitar_waveform_v1.0.0.ino
 MCU: 		ESP32 Huzzah32 Feather Dev Board
 OLED: 		Adafruit 1.44" ST7735
 
+***POST MORTEM***
 -Though this pedal was designed to fit in a 1590B pedal box, I forgot
 to account for the space that the potentiometers require and thus
-there isn't enough room in the pedal.
+there isn't enough room in the pedal for a comfortable fit. Had to 
+make a 5.5mm spacer for the enclosure.
 
 -A buck converter was used to regulate the 9V supply to 5V. It may be
 worth it to investigate in using a LDO instead if the project were to
@@ -14,7 +16,9 @@ be redone.
 -Using an entire dev board for this pedal wasn't a good idea as it
 consumes a large area of the PCB. Upon some research into small, 
 cheap MCUs that would be compatilbe with my existing code, the ESP32
-C3 could be a chip worth taking a look into. 
+C3 could be a chip worth taking a look into. Also the CH32V003 is a
+very cheap MCU that has a Arduino core available. However it needs a
+proprietary programmer and wouldn't work with current code. 
 
 -A future version of this project could use SMD components to further
 reduce the footprint of the design.
@@ -25,7 +29,9 @@ the PCB could be beneficial.
 
 -Having a dedicated connector for the screen would be nice. There is
 a ribbon cable connector on the back of the ST7735 module that could
-be worth looking into.
+be worth looking into. It is called "eye-spi". I think the connector
+itself is called a FPC connector? eye-spi has 18 pins at 0.5mm pitch
+last I remember.
 
 -Making the pedal more tolerant to a range of power supplies (say 9V
 to 15V) would be a nice feature. This could make using a LDO for
@@ -44,3 +50,12 @@ labeling the positive and negative terminals that the power supply
 will connect to, labels for the different potentiometers like "BIAS"
 and "GAIN", and some more general board info on the back potentially.
 
+-Test points down the chain of the front end and other critical 
+places would be a nice touch.
+
+-Resistor R7 needs to be ~100k as the original 1M value is too big 
+and makes a substancial voltage divider with the OpAmp input 
+impedence. The input was seeing around half the reference voltage.
+
+-Add an additional mode for displaying frequency spectrum data. Maybe even a
+spectrograph?

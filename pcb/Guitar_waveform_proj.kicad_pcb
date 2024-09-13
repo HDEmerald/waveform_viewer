@@ -9806,7 +9806,7 @@
   (gr_text "Internal perimeter\nof 1590B Pedal Box" (at 217.17 24.13) (layer "Dwgs.User") (tstamp 6424aaa3-a0a1-434e-96b5-671796ca9fba)
     (effects (font (size 3 3) (thickness 0.25) bold) (justify left bottom))
   )
-  (gr_text "Notes:\n\nMounting holes are sized for M2 screws\n\nThe PCB must be mounted before the Huzzah32 is installed.\nFemale pin headers are highly recommended to allow easy\ninstallation and disassembly." (at 46.99 56.515) (layer "Cmts.User") (tstamp 02e2629c-b17e-4c95-971f-9bb42bc3285a)
+  (gr_text "Notes:\n\nMounting holes are sized for M2 screws" (at 46.99 56.515) (layer "Cmts.User") (tstamp 02e2629c-b17e-4c95-971f-9bb42bc3285a)
     (effects (font (size 2 2) (thickness 0.25)) (justify left bottom))
   )
 
